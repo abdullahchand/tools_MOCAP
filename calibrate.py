@@ -26,9 +26,7 @@ for fname in images:
         cv2.imwrite("calibrated_"+fname,img)
     else:
         continue
-    # cv2.imshow('img',img)
-    # cv2.waitKey(0)
-# cv2.destroyAllWindows()
+   
 
 h,w = img.shape[:2]
 ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, gray.shape[::-1], None, None)
